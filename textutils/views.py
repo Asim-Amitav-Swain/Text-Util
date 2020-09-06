@@ -59,9 +59,6 @@ def analyze(request):
         for char in djtext:
             if char != "\n" and char != "\r":
                 analyzed = analyzed + char
-            else:
-                print("no")
-        print("pre", analyzed)
         params = {'purpose': 'Removed Newlines', 'analyze_text': analyzed}
         djtext = analyzed
         # return render(request, 'analyze2.html', params)
